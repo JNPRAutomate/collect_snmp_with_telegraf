@@ -316,17 +316,28 @@ ResultSet({'(u'measurements', None)': [{u'name': u'vMX_BGP'}, {u'name': u'vMX_in
 ```
 query data from a particular measurement and database
 ```
->>> gp = influx_client.query('select * from "vMX_interfaces" order by desc limit 3', database='juniper').get_points()
+>>> gp = influx_client.query('select * from "vMX_interfaces" order by desc limit 4', database='juniper').get_points()
 >>> for item in gp:
-...     print item['/interfaces/interface/@name']
+...  print item['hostname']
+...  print item['ifName']
+...  print item['ifHCInOctets']
+...  print "*"*10
 ...
-ge-0/0/7
-ge-0/0/6
->>> gp = influx_client.query('select * from "/interfaces/"  order by desc limit 2 ', database='juniper').get_points()
->>> for item in gp:
-...     print item['/interfaces/interface/subinterfaces/subinterface/state/counters/in-octets']
-...
-36
-26277618
+vMX-addr-2
+ge-0/0/0
+656258
+**********
+vMX-addr-2
+ge-0/0/3
+657120
+**********
+vMX-addr-2
+ge-0/0/2
+656977
+**********
+vMX-addr-2
+ge-0/0/1
+657238
+**********
 >>>
-
+```
