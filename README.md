@@ -1,20 +1,20 @@
-# about this repo
+# About this repo
 
 collect data from Junos devices (interfaces details and BGO details) using SNMP with telegraf.  
 store collected data in influxdb  
 query influxdb database with cli and python to extract data   
 
-# about telegraf
+# About telegraf
 
 telegraf is an open source collector written in GO.  
 Telegraf collects data and writes them into a database.  
 It is plugin-driven (it has input plugins, output plugins, ...)  
 
-# about influxdb
+# About influxdb
 
 influxdb is an open source time series database written in GO.  
 
-# requirements 
+# Requirements 
 
 ## Junos configuration
 
@@ -99,7 +99,7 @@ Docker version 18.03.1-ce, build 9ee9f40
 ```
 
 
-# influxdb
+# Influxdb
 
 pull docker images 
 ```
@@ -155,7 +155,7 @@ exit the influxdb container
 # exit
 ```
 
-# telegraf
+# Telegraf
 
 get ip address used by containers
 ```
