@@ -4,7 +4,7 @@ collect data from Junos devices using SNMP with telegraf.
 store collected data in influxdb  
 query influxdb database with cli and python to extract data   
 
-In this demo we will use SNMPv2 to collect on Junos devices 100.123.1.0, 100.123.1.1, 100.123.1.2 these details: 
+In this demo we will use SNMPv2 to collect on Junos devices (100.123.1.0, 100.123.1.1, 100.123.1.2) these details: 
 - Device `hostname` 
 - BGP `bgpPeerState` and `bgpPeerRemoteAddr`. With a filter on some neighbors (192.168.*)
 - Interface `ifName`, `ifHCInOctets`, `ifHCOutOctets`. With a filter on some interfaces (ge-0/0/0, ge-0/0/1, ge-0/0/2, ge-0/0/3) 
