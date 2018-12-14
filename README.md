@@ -176,9 +176,9 @@ Verify
 $ docker images telegraf
 ```
 create a telegraf configuration file ([use this file](telegraf.conf))  
-it will use SNMP input plugin and influxb output plugin
-SNMP will be used to collect interfaces details and BGP details. 
-Influxdb is database to store the data collected 
+it will use SNMP input plugin and influxb output plugin  
+SNMP will be used to collect interfaces details and BGP details.  
+Influxdb is database to store the data collected  
 
 ```
 $ vi telegraf.conf
